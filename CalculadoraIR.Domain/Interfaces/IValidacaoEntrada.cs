@@ -12,5 +12,10 @@ namespace CalculadoraIR.Domain.Interfaces
         {
             return 0;
         }
+
+        public static string ValidaCpf()
+        {
+            return "";
+        }
     }
 }

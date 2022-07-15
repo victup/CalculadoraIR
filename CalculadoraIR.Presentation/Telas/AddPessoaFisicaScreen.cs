@@ -29,7 +29,7 @@ namespace CalculadoraIR.Presentation.Telas
            
             do
             {
-                
+              
                 Console.WriteLine(Mensagens.MenuPessoaFisica.Menu.MenuIncial);
                 op = Validacoes.verificaOpcaoMenuInicial();
 
@@ -37,10 +37,12 @@ namespace CalculadoraIR.Presentation.Telas
                 {
                     Console.WriteLine(Mensagens.MenuPessoaFisica.Menu.TabelaCalculos);
                     CriarPessoaFisica();
+                   
                 }
                 else if (op == 2)
                 {
                     BuscarPessoa();
+                   
                 }
 
             }while(op != 3);
@@ -55,7 +57,7 @@ namespace CalculadoraIR.Presentation.Telas
             var peopleName = Console.ReadLine();
 
             Console.WriteLine(Mensagens.Labels.entreComSeuCpfLabel);
-            var cpf = Console.ReadLine();
+            var cpf = Validacoes.ValidaCpf(Console.ReadLine());
 
             Console.WriteLine(Mensagens.Labels.entreComSeuSalarioLabel);
 
@@ -77,7 +79,7 @@ namespace CalculadoraIR.Presentation.Telas
         public void BuscarPessoa()
         {
             Console.WriteLine(Mensagens.Labels.buscarComCpfLabel);
-            var buscarCpf = Console.ReadLine();
+            var buscarCpf = Validacoes.ValidaCpf(Console.ReadLine());
 
             _pessoaFisicaService.BuscarPessoaFisica(buscarCpf);
         }

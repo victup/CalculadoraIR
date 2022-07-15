@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace CalculadoraIR.Domain
@@ -38,8 +39,22 @@ namespace CalculadoraIR.Domain
             return int.Parse(op);
 
         }
-      
 
-      
+        public static string ValidaCpf(string cpf)
+        {
+            var cpfAnalisado = cpf;
+            Regex rxCpf = new Regex(@"^\d{3}\.\d{3}\.\d{3}-\d{2}$");
+
+            while(!rxCpf.IsMatch(cpfAnalisado))
+            {
+                Console.WriteLine("CPF Inválido. Digite no formato 012.345.678-90: ");
+                cpfAnalisado = Console.ReadLine();
+            }
+
+            return cpfAnalisado;
+            
+        }
+
+
     }
 }
