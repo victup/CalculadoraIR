@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace CalculadoraIR.Domain.Interfaces
 {
-    public interface ValidacaoEntrada
+    public interface IValidacaoEntrada
     {
-       
+        public static int ValidaEntradaNumerica()
+        {
+            return 0;
+        }
     }
 }

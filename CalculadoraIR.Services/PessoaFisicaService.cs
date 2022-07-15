@@ -15,12 +15,7 @@ namespace CalculadoraIR.Services
         public List<PessoaFisica> ListaPessoas { get; set; } = new List<PessoaFisica>();
   
 
-        public void AddPessoaFisica(PessoaFisica pf)
-        {
-
-            
-        }
-
+      
         public void SalvarPessoaFisica(PessoaFisica pf)
         {
             ListaPessoas.Add(pf);
@@ -34,10 +29,11 @@ namespace CalculadoraIR.Services
             {
               if (pessoaAnalisada.Cpf.ToString() == cpf)
                 {
+                    Console.WriteLine(@$"{Mensagens.Mensagens.ApresentacaoImpostoDeRenda}");
                     Console.WriteLine(@$"{Mensagens.Labels.nomeLabel + pessoaAnalisada.Nome}");
                     Console.WriteLine(@$"{Mensagens.Labels.cpfLabel + pessoaAnalisada.Cpf}");
                     Console.WriteLine(@$"{Mensagens.Labels.salarioLabel + pessoaAnalisada.Salario}");
-                    Console.WriteLine(@$"{Mensagens.Labels.salarioLabel + pessoaAnalisada.ImpostoRenda}");
+                    Console.WriteLine(@$"{Mensagens.Labels.ImpostoDeRendaLabel + pessoaAnalisada.ImpostoRenda}");
                     contPessoaEncontrada++;
                 }
             }

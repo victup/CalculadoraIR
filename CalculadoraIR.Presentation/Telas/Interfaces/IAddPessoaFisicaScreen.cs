@@ -8,7 +8,7 @@ namespace CalculadoraIR.Presentation.Telas.Interfaces
 {
     public interface IAddPessoaFisicaScreen
     {
-        void AddPessoaFisica();
+        void CriarPessoaFisica();
 
         void BuscarPessoa();
 

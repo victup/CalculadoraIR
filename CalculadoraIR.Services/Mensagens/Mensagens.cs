@@ -10,5 +10,11 @@ namespace CalculadoraIR.Services.Mensagens
     {
 
         public const string PessoaNaoEncontrada =  @"Pessoa não encontrada";
+
+        public const string ApresentacaoImpostoDeRenda = @"
+----------------------------
+Aqui está o resultado gerado
+----------------------------
+";
     }
 }

@@ -9,7 +9,6 @@ namespace CalculadoraIR.Services.Interfaces
 {
     public interface IPessoaFisicaService
     {
-        void AddPessoaFisica(PessoaFisica pf);
 
         public void SalvarPessoaFisica(PessoaFisica pessoa);
 

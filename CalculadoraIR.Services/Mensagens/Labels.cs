@@ -11,5 +11,6 @@ namespace CalculadoraIR.Services.Mensagens
         public const string nomeLabel = @"Nome: ";
         public const string cpfLabel = @"CPF: ";
         public const string salarioLabel = @"Salário: ";
+        public const string ImpostoDeRendaLabel = @"Imposto de Renda: ";
     }
 }

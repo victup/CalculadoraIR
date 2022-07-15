@@ -35,7 +35,8 @@ namespace CalculadoraIR.Presentation.Telas
 
                 if (op == 1)
                 {
-                    AddPessoaFisica();
+                    Console.WriteLine(Mensagens.MenuPessoaFisica.Menu.TabelaCalculos);
+                    CriarPessoaFisica();
                 }
                 else if (op == 2)
                 {
@@ -48,7 +49,7 @@ namespace CalculadoraIR.Presentation.Telas
         }
 
 
-        public void AddPessoaFisica()
+        public void CriarPessoaFisica()
         {
             Console.WriteLine(Mensagens.Labels.entreComSeuNomeLabel);
             var peopleName = Console.ReadLine();
@@ -64,12 +65,13 @@ namespace CalculadoraIR.Presentation.Telas
 
             PessoaFisica novaPessoaFisica = new PessoaFisica(peopleName, cpf, salario, impostoRenda);
 
-
             _pessoaFisicaService.SalvarPessoaFisica(novaPessoaFisica);
 
+            _pessoaFisicaService.BuscarPessoaFisica(novaPessoaFisica.Cpf);
 
-          
-            
+
+
+
         }
 
         public void BuscarPessoa()
