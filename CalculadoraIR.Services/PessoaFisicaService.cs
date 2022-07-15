@@ -33,7 +33,15 @@ namespace CalculadoraIR.Services
                     Console.WriteLine(@$"{Mensagens.Labels.nomeLabel + pessoaAnalisada.Nome}");
                     Console.WriteLine(@$"{Mensagens.Labels.cpfLabel + pessoaAnalisada.Cpf}");
                     Console.WriteLine(@$"{Mensagens.Labels.salarioLabel + pessoaAnalisada.Salario}");
-                    Console.WriteLine(@$"{Mensagens.Labels.ImpostoDeRendaLabel + pessoaAnalisada.ImpostoRenda}");
+                    if(pessoaAnalisada.ImpostoRenda > 0)
+                    {
+                        Console.WriteLine(@$"{Mensagens.Labels.ImpostoDeRendaLabel + pessoaAnalisada.ImpostoRenda}");
+                    }
+                    else
+                    {
+                        Console.WriteLine(@$"{Mensagens.Labels.ImpostoDeRendaLabel}ISENTO");
+                    }
+                    
                     contPessoaEncontrada++;
                 }
             }

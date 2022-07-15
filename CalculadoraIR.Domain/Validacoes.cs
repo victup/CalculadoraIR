@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CalculadoraIR.Domain
 {
-    public abstract class Validacoes: IValidacaoMenu, IValidacaoEntrada
+    public abstract class Validacoes : IValidacaoMenu, IValidacaoEntrada
     {
        public static int verificaOpcaoMenuInicial()
         {
@@ -53,6 +53,21 @@ namespace CalculadoraIR.Domain
 
             return cpfAnalisado;
             
+        }
+
+        public static double ValidaSalario(string salario)
+        {
+            var salarioAnalisado = salario;
+
+            Regex rxSalario = new Regex(@"(\d{1,3}(\.\d{3})*|\d+)(\,\d{2})?$");
+
+            while (!rxSalario.IsMatch(salarioAnalisado))
+            {
+                Console.WriteLine("Salário não está no formato correto de moeda. Exemplo: 1200,00");
+                salarioAnalisado = Console.ReadLine();
+            }
+
+            return Convert.ToDouble(salarioAnalisado);
         }
 
 

@@ -61,7 +61,7 @@ namespace CalculadoraIR.Presentation.Telas
 
             Console.WriteLine(Mensagens.Labels.entreComSeuSalarioLabel);
 
-            bool salarioIsValid = double.TryParse(Console.ReadLine(), out var salario);
+            double salario = Validacoes.ValidaSalario(Console.ReadLine());
 
             var impostoRenda = _taxCalculator.TaxCalculation(salario);
 

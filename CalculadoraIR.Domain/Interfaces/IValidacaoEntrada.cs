@@ -17,5 +17,11 @@ namespace CalculadoraIR.Domain.Interfaces
         {
             return "";
         }
+
+        public static double ValidaSalario()
+        {
+            return 0;
+        }
+
     }
 }
