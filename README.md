@@ -4,7 +4,7 @@ Projeto: Calculando IR
 Crie um programa que receba um valor e apresente o imposto a ser pago com base na tabela abaixo¹:
 ![image](https://user-images.githubusercontent.com/38474570/179327859-72709b15-ea40-472f-baaf-4f08ed576678.png)
 
-
+ 
 O programa deve seguir algumas diretrizes:
 
     Estar dividido em 3 camadas principais:
